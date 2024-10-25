@@ -1,0 +1,6 @@
+body {
+  @apply bg-primary text-white font-steins;
+}
+h1, h2 {
+  @apply text-accent;
+}
