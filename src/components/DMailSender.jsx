@@ -5,7 +5,12 @@ const DMailSender = () => {
   const [dmail, setDmail] = useState("");
 
   const sendDMail = () => {
-    message.success(`D-Mail sent: "${dmail}"`);
+    if (dmail.trim() === "") {
+      message.error("Are you sure it's a proper D-Mail?");
+      return;
+    }
+    
+    message.success(`D-Mail sent: ${dmail}`);
     setDmail("");
   };
 
